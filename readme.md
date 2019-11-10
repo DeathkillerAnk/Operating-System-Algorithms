@@ -1,2 +1,3 @@
 # *Operating System Algorithms in C++*
-### first come, first served (FCFS)
+## Scheduling Algo 
+##### * first come, first served (FCFS)
