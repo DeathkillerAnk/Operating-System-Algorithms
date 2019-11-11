@@ -5,12 +5,13 @@
 ##### * Round Robin Scheduling
 
 
-### Resource Allocation Algo 
+### Resource Allocation And Process Synchronization Algorithm
 ##### * Banker’s Algorithm
+##### * reader writer program
 
 
-### Process Synchronization Algo 
-##### * Banker’s Algorithm
+###  Algo 
+##### * 
 
 
 
