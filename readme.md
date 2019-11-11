@@ -8,6 +8,7 @@
 ### Resource Allocation And Process Synchronization Algorithm
 ##### * Banker’s Algorithm
 ##### * reader writer program
+##### * Producer Consumer
 
 
 ###  Algo 
