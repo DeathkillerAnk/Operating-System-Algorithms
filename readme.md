@@ -8,6 +8,8 @@
 ### Resource Allocation And Process Synchronization Algorithm
 ##### * Banker’s Algorithm
 ##### * reader writer program
+##### * reader writer program
+            `g++ reader_writer.cpp -lpthread`
 ##### * Producer Consumer
 
 
