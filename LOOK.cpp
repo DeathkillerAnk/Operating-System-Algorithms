@@ -1,27 +1,23 @@
-// C++ program to demonstrate 
-// SCAN Disk Scheduling algorithm 
-
 #include <bits/stdc++.h> 
 using namespace std; 
+
+
+// C++ program to demonstrate 
+// SCAN Disk Scheduling algorithm 
 
 int size = 8; 
 int disk_size = 200; 
 
-void SCAN(int arr[], int head, string direction) 
+void LOOK(int arr[], int head, string direction) 
 { 
 	int seek_count = 0; 
 	int distance, cur_track; 
 	vector<int> left, right; 
 	vector<int> seek_sequence; 
 
-	// appending end values 
-	// which has to be visited 
-	// before reversing the direction 
-	if (direction == "left") 
-		left.push_back(0); 
-	else if (direction == "right") 
-		right.push_back(disk_size - 1); 
-
+	// appending values which are 
+	// currently at left and right 
+	// direction from the head. 
 	for (int i = 0; i < size; i++) { 
 		if (arr[i] < head) 
 			left.push_back(arr[i]); 
@@ -30,12 +26,14 @@ void SCAN(int arr[], int head, string direction)
 	} 
 
 	// sorting left and right vectors 
+	// for servicing tracks in the 
+	// correct sequence. 
 	std::sort(left.begin(), left.end()); 
 	std::sort(right.begin(), right.end()); 
 
 	// run the while loop two times. 
 	// one by one scanning right 
-	// and left of the head 
+	// and left side of the head 
 	int run = 2; 
 	while (run--) { 
 		if (direction == "left") { 
@@ -54,6 +52,7 @@ void SCAN(int arr[], int head, string direction)
 				// accessed track is now the new head 
 				head = cur_track; 
 			} 
+			// reversing the direction 
 			direction = "right"; 
 		} 
 		else if (direction == "right") { 
@@ -71,11 +70,12 @@ void SCAN(int arr[], int head, string direction)
 				// accessed track is now new head 
 				head = cur_track; 
 			} 
+			// reversing the direction 
 			direction = "left"; 
 		} 
 	} 
 
-	cout << "Total number of seek operations = "
+	cout << "Total number of seek operations = " 
 		<< seek_count << endl; 
 
 	cout << "Seek Sequence is" << endl; 
@@ -95,7 +95,10 @@ int main()
 	int head = 50; 
 	string direction = "right"; 
 
-	SCAN(arr, head, direction); 
+	cout << "Initial position of head: " 
+		<< head << endl; 
+
+	LOOK(arr, head, direction); 
 
 	return 0; 
 } 

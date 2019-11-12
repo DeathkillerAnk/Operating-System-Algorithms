@@ -8,13 +8,23 @@
 ### Resource Allocation And Process Synchronization Algorithm
 ##### * Banker’s Algorithm
 ##### * reader writer program
-##### * reader writer program
             `g++ reader_writer.cpp -lpthread`
 ##### * Producer Consumer
+##### * Dining Philosophers
 
 
-###  Algo 
-##### * 
+###  Disk-Scheduling Algorithms
+##### * Shortest Seek Time First
+##### * SCAN
+##### * CSCAN
+##### * LOOK
+##### * CLOOK
+
+### Paging Algorithms
+##### * Least Recently Used (LRU) Page Replacement algorithm
+##### * First In First Out
+##### * Optimal Page Replacement Algorithm
+
 
 
 
